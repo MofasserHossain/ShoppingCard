@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pop-up" id="popup">
+        <div class="pop-up-window mt-4">
+            <button onclick="popup('hidden')" class="close" id="close"><span >&times;</span></button>
+            <h4 class="text-center">Successful</h4>
+            <div class="body">
+                <table class="table mt-3">
+                    <tr>
+                        <th>Service</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td><span id="">IPhone 11 Price</span></td>
+                        <td><span id="phone-number"> 0 </span> x 1200 </td>
+                        <td>
+                            <span id="iphone-cost"> 00 </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id=""> IPhone Case </span></td>
+                        <td><span id="case-number">0 </span> x 60</td>
+                        <td>
+                            <span id="case-cost"> 00 </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vat</td>
+                        <td></td>
+                        <td><span id="vat-amount">00</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td><span id="total-cost">00</span></td>
+                    </tr>
+                </table>
+                <h2 class="text-center">Have A Nice Journey!</h2>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="cart">
+                <div class="col-md-12 col-lg-10 mx-auto">
+                    <div id="phone-part" class="cart-item">
+                        <div class="row">
+                            <div class="col-md-7 center-item">
+                                <img src="images/product-1.png" alt="">
+                                <h5>iPhone 11 128GB Black</h5>
+                            </div>
+                            <div class="col-md-5 center-item">
+                                <div class="input-group number-spinner">
+                                    <button id="phone-decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="phone-quantity" type="text" class="form-control text-center" value="1">
+                                    <button id="phone-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <h5>$ <span id="phone-price">1200</span></h5>
+                                <img onclick="remove('phone')" id="remove-phone" src="images/remove.png" alt="" class="remove-item">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="case-part" class="cart-item">
+                        <div class="row">
+                            <div class="col-md-7 center-item mx-auto">
+                                <img src="images/product-2.png" alt="">
+                                <h5>iPhone 11 Silicone Case - Black</h5>
+                            </div>
+                            <div class="col-md-5 center-item">
+                                <div class="input-group number-spinner">
+                                    <button id="case-decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="case-quantity" type="text" class="form-control text-center" value="1">
+                                    <button id="case-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                                </div>
+                                <h5>$ <span id="case-price">60</span></h5>
+                                <img onclick="remove('case')" id="remove-case" src="images/remove.png" alt="" class="remove-item">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <h5>Subtotal: </h5>
+                                <h5>Tax:</h5>
+                                <h5>Total:</h5>
+                            </div>
+
+                            <div class="col-md-4 status">
+                                <h5>$ <span id="subtotal-price">1260</span></h5>
+                                <h5>$ <span id="tax-amount">120</span> </h5>
+                                <h5>$ <span id="totalPrice">1380</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 pt-4 pb-4">
+                        <button onclick="popup('visible')" id="submit" type="button" class="btn btn-success check-out">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
